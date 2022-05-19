@@ -23,7 +23,22 @@ Output: [0,1,2]
 
 
 
-
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+     //sort(nums.begin() , nums.end()); You must solve this problem without using the library's sort function.
+        
+for(int i=0; i<=nums.size()-1; i++){
+for(int j=i+1; j<=nums.size()-1; j++){
+if(nums[i]>nums[j]){
+int temp = nums[i];
+nums[i]=nums[j];
+nums[j]=temp;
+}
+}
+}
+    }
+};
 
 
 
