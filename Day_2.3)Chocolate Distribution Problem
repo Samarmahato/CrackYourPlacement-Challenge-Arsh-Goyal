@@ -16,10 +16,15 @@ maximum chocolates and minimum chocolates
 is 9 - 3 = 6 by choosing following M packets :
 {3, 4, 9, 7, 9}.
 */
-
-
-
-
+/*******************************************************/
+   long long ans=LONG_MAX;
+    sort(a.begin(),a.end());
+    for(int i=0;i+m-1<n;i++){
+      
+        ans=min(ans,a[i+m-1]-a[i]);
+    }
+    return ans;
+    } 
 
 
 
