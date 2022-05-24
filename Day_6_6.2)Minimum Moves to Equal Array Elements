@@ -1,0 +1,64 @@
+Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+
+In one move, you can increment n - 1 elements of the array by 1.
+
+ 
+
+Example 1:
+
+Input: nums = [1,2,3]
+Output: 3
+Explanation: Only three moves are needed (remember each move increments two elements):
+[1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]
+Example 2:
+
+Input: nums = [1,1,1]
+Output: 0
+
+class Solution {
+public:
+  // bool isEqual(vector<int> a){
+  //       int i, n;
+  //       n = a.size();
+  //       for(i=1;i<n;i++){
+  //           if(a[i] != a[i-1]){
+  //               return false;
+  //           }
+  //       }
+  //       return true;
+  //   }
+   // int minMoves(vector<int>& a){
+  //       int i, n, moves = 0;
+  //       n = a.size();
+  //       while(!isEqual(a)){
+  //           sort(a.begin(), a.end());
+  //           i = 0;
+  //           while(i != n-1){
+  //               a[i]++;
+  //               i++;
+  //           }
+  //           moves++;
+  //       }
+  //       return moves;
+  //   }
+        
+        int minMoves(vector<int>& nums){
+    
+        int n=nums.size();
+        sort(nums.begin(),nums.end());
+        int temp=nums[0], i=1, moves=0;
+        while(i<n){
+            moves+=(nums[i]-temp);
+            i++;
+        }
+        return moves;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+};
