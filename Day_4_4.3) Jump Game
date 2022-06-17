@@ -14,3 +14,22 @@ Example 2:
 Input: nums = [3,2,1,0,4]
 Output: false
 Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
+
+
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int rh=0;
+        for(int i=0;i<=rh;i++){
+            rh=max(rh,i+nums[i]);
+            if(rh>=nums.size()-1){
+
+            return true;
+            }
+        }
+        
+        return false;
+        
+        
+    }
+};
